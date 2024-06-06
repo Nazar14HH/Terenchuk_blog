@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Model;
 class BlogPost extends Model
 {   
     use SoftDeletes;
+    const UNKNOWN_USER = 1;
+
+
     
 protected $fillable
 = [
@@ -19,7 +22,6 @@ protected $fillable
     'content_raw',
     'is_published',
     'published_at',
-    'user_id',
 ];
 
 /**
